@@ -1,0 +1,34 @@
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
+    %title= content_for?(:title) ? yield(:title) : "AIT PACE 2014"
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "vendor/modernizr"
+    = csrf_meta_tags
+  %body
+    .contain-to-grid.sticky
+      %nav.top-bar{"data-topba" => ""}
+        %ul.title-area
+          %li.name
+            %h1= link_to "PACE'14", root_path
+        %section.top-bar-section
+          %ul.right
+            %li= link_to "HOME", root_path
+            %li= link_to "SPONSORS", root_path
+            %li.has-dropdown
+              = link_to "EVENTS", root_path
+              %ul.dropdown
+                = link_to "Football", root_path
+                = link_to "Tennis", root_path
+                = link_to "Badminton", root_path
+                = link_to "Squash", root_path
+                = link_to "volleyball", root_path
+            %li.has-form
+              .row.collapse
+                .large-8.small-9.columns
+                  %input{placeholder: "Find Stuff", type: "text"}
+                .large-4.small-3.columns
+                  %a.alert.button.expand{href: "#"} Search
+    = yield
+    = javascript_include_tag "application"

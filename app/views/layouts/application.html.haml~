@@ -1,0 +1,15 @@
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
+    %title= content_for?(:title) ? yield(:title) : "AIT PACE 2014"
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "vendor/modernizr"
+    = csrf_meta_tags
+  %body
+    %nav.top-bar{"data-topba" => ""}
+      %ul.title-area
+        %li.name
+          %h1= link_to "PACE'14", root_path
+    = yield
+    = javascript_include_tag "application"
