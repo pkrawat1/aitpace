@@ -1,0 +1,13 @@
+
+@mixin header($color,$fsize)
+  color: $color
+  font-size: $fsize
+
+.canvas
+  height: 60%
+  background: rgba(#008cba, 0.6)
+  h1
+    @include header(white,40px)
+  p
+    text-align: justify
+    @include header(white,15px)
