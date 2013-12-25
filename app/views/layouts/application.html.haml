@@ -19,11 +19,9 @@
             %li.has-dropdown
               = link_to "EVENTS", root_path
               %ul.dropdown
-                %li= link_to "Football", root_path
-                %li= link_to "Tennis", root_path
-                %li= link_to "Badminton", root_path
-                %li= link_to "Squash", root_path
-                %li= link_to "volleyball", root_path
+                - if @events.any?
+                  - @events.each do |event|
+                    %li= link_to event.name, event_show_path(event)
             %li.has-form
               .row.collapse
                 .large-8.small-9.columns

@@ -1,0 +1,17 @@
+.canvas.large-12.columns
+  .large-6.large-offset-1.columns
+    %br
+    %h1 Rules and regulation 
+    %p
+      Rules : 
+      = @event.rules
+    %p
+      Fees : 
+      = @event.fees
+    %h1
+      Lets see how you score!!!
+
+  .large-3.large-offset-1.columns
+    %br
+    %h1= @event.name
+    %img{src: "/assets/#{@event.name.downcase}.jpg"}

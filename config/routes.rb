@@ -1,4 +1,12 @@
 Aitpace::Application.routes.draw do
+  get "registration/new"
+  get "registration/index"
+  get "event/new"
+  get "event/show"
+  get "event/edit"
+  get "event/update"
+  get "event/delete"
+  get "event/index"
   get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
