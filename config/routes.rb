@@ -1,6 +1,6 @@
 Aitpace::Application.routes.draw do
-  get "registration/new"
-  get "registration/index"
+  get "registrations/new"
+  get "registrations/index"
   get "event/new"
   get "event/show"
   get "event/edit"

@@ -1,0 +1,78 @@
+.canvas
+  .row
+    .large-5.columns  
+      %br
+      %h1 Rules and Regulation
+    .panel.form.large-5.large-offset-1.columns
+      = form_for @team do |f|
+        %h4 All Fields Required
+        %hr
+        .row.collapse
+          .large-3.columns
+            %span.prefix
+              = f.label :name
+          .large-9.columns
+            = f.text_field :name, placeholder: "Enter your Name"
+        .row.collapse
+          .large-3.columns
+            %span.prefix
+              = f.label :mob_no
+          .large-9.columns
+            = f.text_field :mob_no, placeholder: "Enter your Mobile no" 
+        .row.collapse
+          .large-3.columns
+            %span.prefix
+              = f.label :email
+          .large-9.columns
+            = f.text_field :email, placeholder: "Enter your Email" 
+        .row.collapse
+          .large-3.columns
+            %span.prefix
+              = f.label :branch
+          .large-9.columns
+            = f.text_field :branch, placeholder: "Enter your Branch" 
+        .row.collapse
+          .large-3.columns
+            %span.prefix
+              = f.label :year
+          .large-9.columns
+            = f.text_field :year, placeholder: "Enter your Year" 
+        .row.collapse
+          .large-3.columns
+            %span.prefix
+              = f.label :college
+          .large-9.columns
+            = f.text_field :college, placeholder: "Name of College" 
+        .row.collapse
+          .large-3.columns
+            %span.prefix
+              = f.label :event
+          .large-9.columns
+            = f.text_field :event, placeholder: "Enter Event" 
+        .row.collapse
+          .large-3.columns
+            %span.prefix
+              = f.label :members
+          .large-9.columns
+            = f.text_field :members, placeholder: "Team Members" 
+        .row.collapse
+          .large-3.columns
+            %span.prefix
+              = f.label :staff_contact
+          .large-9.columns
+            = f.text_field :staff_contact, placeholder: "Staff Mobile no." 
+        .row.collapse
+          .large-3.columns
+            %span.prefix
+              = f.label :staff_email
+          .large-9.columns
+            = f.text_field :staff_email, placeholder: "Staff Email" 
+        .row.collapse
+          .large-3.columns
+            %span.prefix
+              = f.label :staff_name
+          .large-9.columns
+            = f.text_field :staff_name, placeholder: "Name of Staff" 
+        .row
+          .large-4.large-offset-4
+            = f.submit "Submit", class: "button primary success"
