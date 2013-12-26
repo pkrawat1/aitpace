@@ -3,7 +3,6 @@ class EventController < ApplicationController
   end
 
   def show
-    @events = Events.all
     @event = Events.find(params[:format])
   end
 
