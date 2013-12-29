@@ -1,78 +1,79 @@
-.canvas
-  .row
-    .large-5.columns  
-      %br
-      %h1 Rules and Regulation
-    .panel.form.large-5.large-offset-1.columns
-      = form_for @team do |f|
-        %h4 All Fields Required
-        %hr
+.row
+  .panel.form.medium-10.medium-offset-1.large-10.large-offset-1.columns
+    = form_for @team do |f|
+      %h2 Your Details
+      %h4 All Fields Required
+      %hr
+      .medium-6.columns
         .row.collapse
-          .large-3.columns
+          .medium-3.large-3.columns
             %span.prefix
               = f.label :name
-          .large-9.columns
+          .medium-9.large-9.columns
             = f.text_field :name, placeholder: "Enter your Name"
         .row.collapse
-          .large-3.columns
+          .medium-3.large-3.columns
             %span.prefix
-              = f.label :mob_no
-          .large-9.columns
-            = f.text_field :mob_no, placeholder: "Enter your Mobile no" 
+              = f.label "Mobile No."
+          .medium-9.large-9.columns
+            = f.text_field :mob_no, placeholder: "Eg. 8888888888" 
         .row.collapse
-          .large-3.columns
+          .medium-3.large-3.columns
             %span.prefix
               = f.label :email
-          .large-9.columns
-            = f.text_field :email, placeholder: "Enter your Email" 
+          .medium-9.large-9.columns
+            = f.text_field :email, placeholder: "Eg. example@gmail.com" 
         .row.collapse
-          .large-3.columns
+          .medium-3.large-3.columns
             %span.prefix
               = f.label :branch
-          .large-9.columns
-            = f.text_field :branch, placeholder: "Enter your Branch" 
+          .medium-9.large-9.columns
+            = f.text_field :branch, placeholder: "Eg. B.E, T.E" 
         .row.collapse
-          .large-3.columns
+          .medium-3.large-3.columns
             %span.prefix
               = f.label :year
-          .large-9.columns
+          .medium-9.large-9.columns
             = f.text_field :year, placeholder: "Enter your Year" 
         .row.collapse
-          .large-3.columns
+          .medium-3.large-3.columns
             %span.prefix
               = f.label :college
-          .large-9.columns
+          .medium-9.large-9.columns
             = f.text_field :college, placeholder: "Name of College" 
+      .medium-6.large-6.columns
         .row.collapse
-          .large-3.columns
+          .medium-3.large-3.columns
             %span.prefix
               = f.label :event
-          .large-9.columns
+          .medium-9.large-9.columns
             = f.text_field :event, placeholder: "Enter Event" 
         .row.collapse
-          .large-3.columns
+          .medium-3.large-3.columns
             %span.prefix
               = f.label :members
-          .large-9.columns
-            = f.text_field :members, placeholder: "Team Members" 
+          .medium-9.large-9.columns
+            = f.text_area :members, placeholder: "Name 1, Name 2 etc." 
+        %h2 Staff Details
+        %hr
         .row.collapse
-          .large-3.columns
+          .medium-3.large-3.columns
             %span.prefix
-              = f.label :staff_contact
-          .large-9.columns
+              = f.label "Mobile No."
+          .medium-9.large-9.columns
             = f.text_field :staff_contact, placeholder: "Staff Mobile no." 
         .row.collapse
-          .large-3.columns
+          .medium-3.large-3.columns
             %span.prefix
-              = f.label :staff_email
-          .large-9.columns
+              = f.label "Email"
+          .medium-9.large-9.columns
             = f.text_field :staff_email, placeholder: "Staff Email" 
         .row.collapse
-          .large-3.columns
+          .medium-3.large-3.columns
             %span.prefix
-              = f.label :staff_name
-          .large-9.columns
+              = f.label "Name"
+          .medium-9.large-9.columns
             = f.text_field :staff_name, placeholder: "Name of Staff" 
         .row
-          .large-4.large-offset-4
+          .medium-4.medium-offset-4.large-4.large-offset-4
             = f.submit "Submit", class: "button primary success"
