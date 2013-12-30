@@ -1,11 +1,6 @@
 Aitpace::Application.routes.draw do
-  get "registrations/new"
-  get "registrations/index"
-  get "event/new"
-  get "event/show"
-  get "event/edit"
-  get "event/update"
-  get "event/delete"
+  resources :registrations
+  resources :event
   get "event/index"
   get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.

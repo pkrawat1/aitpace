@@ -16,13 +16,13 @@
           %ul.right
             %li.active= link_to "HOME", root_path
             %li= link_to "SPONSORS", root_path
-            %li= link_to "REGISTER", registrations_new_path
+            %li= link_to "REGISTER", new_registration_path
             %li.has-dropdown
               = link_to "EVENTS", root_path
               %ul.dropdown
                 - if @events.any?
                   - @events.each do |event|
-                    %li= link_to event.name, event_show_path(event)
+                    %li= link_to event.name, event_path(event)
             %li.has-form
               .row.collapse
                 .large-8.small-9.columns

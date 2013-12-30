@@ -1,6 +1,6 @@
 .row
   .panel.form.medium-10.medium-offset-1.large-10.large-offset-1.columns
-    = form_for @team do |f|
+    = form_for :registration, url: registrations_path do |f|
       %h2 Your Details
       %h4 All Fields Required
       %hr
@@ -10,50 +10,50 @@
             %span.prefix
               = f.label :name
           .medium-9.large-9.columns
-            = f.text_field :name, placeholder: "Enter your Name"
+            = f.text_field :name, required: "required", placeholder: "Enter your Name"
         .row.collapse
           .medium-3.large-3.columns
             %span.prefix
               = f.label "Mobile No."
           .medium-9.large-9.columns
-            = f.text_field :mob_no, placeholder: "Eg. 8888888888" 
+            = f.text_field :mob_no, required: "required", placeholder: "Eg. 8888888888" 
         .row.collapse
           .medium-3.large-3.columns
             %span.prefix
               = f.label :email
           .medium-9.large-9.columns
-            = f.text_field :email, placeholder: "Eg. example@gmail.com" 
+            = f.text_field :email, type: "email", required: "required", placeholder: "Eg. example@gmail.com" 
         .row.collapse
           .medium-3.large-3.columns
             %span.prefix
               = f.label :branch
           .medium-9.large-9.columns
-            = f.text_field :branch, placeholder: "Eg. B.E, T.E" 
+            = f.text_field :branch, required: "required", placeholder: "Eg. B.E, T.E" 
         .row.collapse
           .medium-3.large-3.columns
             %span.prefix
               = f.label :year
           .medium-9.large-9.columns
-            = f.text_field :year, placeholder: "Enter your Year" 
+            = f.text_field :year, required: "required", placeholder: "Enter your Year" 
         .row.collapse
           .medium-3.large-3.columns
             %span.prefix
               = f.label :college
           .medium-9.large-9.columns
-            = f.text_field :college, placeholder: "Name of College" 
+            = f.text_field :college, required: "required", placeholder: "Name of College" 
       .medium-6.large-6.columns
         .row.collapse
           .medium-3.large-3.columns
             %span.prefix
               = f.label :event
           .medium-9.large-9.columns
-            = f.text_field :event, placeholder: "Enter Event" 
+            = f.text_field :event, required: "required", placeholder: "Enter Event" 
         .row.collapse
           .medium-3.large-3.columns
             %span.prefix
               = f.label :members
           .medium-9.large-9.columns
-            = f.text_area :members, placeholder: "Name 1, Name 2 etc." 
+            = f.text_area :members, required: "required", placeholder: "Name 1, Name 2 etc." 
         %h2 Staff Details
         %hr
         .row.collapse
@@ -61,19 +61,19 @@
             %span.prefix
               = f.label "Mobile No."
           .medium-9.large-9.columns
-            = f.text_field :staff_contact, placeholder: "Staff Mobile no." 
+            = f.text_field :staff_contact, required: "required", placeholder: "Staff Mobile no." 
         .row.collapse
           .medium-3.large-3.columns
             %span.prefix
               = f.label "Email"
           .medium-9.large-9.columns
-            = f.text_field :staff_email, placeholder: "Staff Email" 
+            = f.text_field :staff_email, type: "email", required: "required", placeholder: "Staff Email" 
         .row.collapse
           .medium-3.large-3.columns
             %span.prefix
               = f.label "Name"
           .medium-9.large-9.columns
-            = f.text_field :staff_name, placeholder: "Name of Staff" 
+            = f.text_field :staff_name, required: "required", placeholder: "Name of Staff" 
         .row
           .medium-4.medium-offset-4.large-4.large-offset-4
             = f.submit "Submit", class: "button primary success"

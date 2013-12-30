@@ -7,7 +7,7 @@ class CreateRegistrations < ActiveRecord::Migration
       t.string :branch
       t.string :year
       t.string :college
-      t.references :event, index: true
+      t.string :event
       t.text :members
       t.string :staff_name
       t.integer :staff_contact
