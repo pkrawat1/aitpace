@@ -7,40 +7,40 @@
       .medium-6.large-6.columns
         
         .row.collapse
-          .medium-3.large-3.columns
+          .small-3.medium-3.large-3.columns
             %span.prefix
               = f.label :fees
-          .medium-9.large-9.columns
+          .small-9.medium-9.large-9.columns
             = f.text_field :fees, placeholder: "Enter fees for boys and girls"
         %h4 use Html br tags in rules
         .row.collapse
-          .medium-3.large-3.columns
+          .small-3.medium-3.large-3.columns
             %span.prefix
               = f.label :rules
-          .medium-9.large-9.columns
+          .small-9.medium-9.large-9.columns
             = f.text_area :rules, placeholder: "Enter rules for the event"
 
 
         %h3 Event Head
         .row.collapse
-          .medium-3.large-3.columns
+          .small-3.medium-3.large-3.columns
             %span.prefix
               = f.label "Name"
-          .medium-9.large-9.columns
+          .small-9.medium-9.large-9.columns
             = f.text_field :event_head_name, required: "required", placeholder: "Enter Name"
       
         .row.collapse
-          .medium-3.large-3.columns
+          .small-3.medium-3.large-3.columns
             %span.prefix
               = f.label "Email"
-          .medium-9.large-9.columns
+          .small-9.medium-9.large-9.columns
             = f.text_field :event_head_email, required: "required", placeholder: "Enter email"
       
         .row.collapse
-          .medium-3.large-3.columns
+          .small-3.medium-3.large-3.columns
             %span.prefix
               = f.label "Mobile No."
-          .medium-9.large-9.columns
+          .small-9.medium-9.large-9.columns
             = f.text_field :event_head_mobile, placeholder: "Enter  Mobile no"
       
       .large-4.large-offset-2.columns
