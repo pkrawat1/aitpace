@@ -2,7 +2,7 @@ class CreateRegistrations < ActiveRecord::Migration
   def change
     create_table :registrations do |t|
       t.string :name
-      t.integer :mob_no
+      t.string :mob_no
       t.string :email
       t.string :branch
       t.string :year
@@ -10,7 +10,7 @@ class CreateRegistrations < ActiveRecord::Migration
       t.string :event
       t.text :members
       t.string :staff_name
-      t.integer :staff_contact
+      t.string :staff_contact
       t.string :staff_email
 
       t.timestamps

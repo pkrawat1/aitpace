@@ -20,24 +20,16 @@ ActiveRecord::Schema.define(version: 20131230153346) do
     t.string   "name"
     t.string   "fees"
     t.text     "rules"
-    t.integer  "head_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "events", ["head_id"], name: "index_events_on_head_id", using: :btree
-
-  create_table "heads", force: true do |t|
-    t.string   "name"
-    t.integer  "phone"
-    t.string   "email"
+    t.string   "event_head_name"
+    t.string   "event_head_email"
+    t.string   "event_head_mobile"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "registrations", force: true do |t|
     t.string   "name"
-    t.integer  "mob_no"
+    t.string   "mob_no"
     t.string   "email"
     t.string   "branch"
     t.string   "year"
@@ -45,7 +37,7 @@ ActiveRecord::Schema.define(version: 20131230153346) do
     t.string   "event"
     t.text     "members"
     t.string   "staff_name"
-    t.integer  "staff_contact"
+    t.string   "staff_contact"
     t.string   "staff_email"
     t.datetime "created_at"
     t.datetime "updated_at"

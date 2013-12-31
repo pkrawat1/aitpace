@@ -4,7 +4,9 @@ class CreateEvents < ActiveRecord::Migration
       t.string :name
       t.string :fees
       t.text :rules
-      t.references :head, index: true
+      t.string :event_head_name
+      t.string :event_head_email
+      t.string :event_head_mobile
 
       t.timestamps
     end

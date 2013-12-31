@@ -1,17 +1,25 @@
 .canvas.large-12.columns
-  .large-6.large-offset-1.columns
+  .medium-7.medium-offset-1.large-7.large-offset-1.columns
     %br
-    %h1 Rules and regulation 
+    %h1 
+      Rules and regulation 
+      .alert.button= link_to "Edit", edit_event_path(@event.id)
     %p
-      Rules : 
-      = @event.rules
+      = @event.rules.html_safe
     %p
       Fees : 
       = @event.fees
     %h1
-      Lets see how you score!!!
+      contact
+    %p
+      = @event.event_head_name
+      %br
+      = @event.event_head_email
+      %br
+      = @event.event_head_mobile
 
-  .large-3.large-offset-1.columns
+
+  .medium-3.medium-offset-1.large-3.large-offset-1.columns
     %br
     %h1= @event.name
     %img{src: "/assets/#{@event.name.downcase}.png"}
