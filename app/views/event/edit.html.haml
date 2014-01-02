@@ -1,10 +1,10 @@
 .row
-  .panel.form.medium-10.medium-offset-1.large-10.large-offset-1.columns
+  .panel.form.medium-8.medium-offset-2.large-8.large-offset-2.columns
     = form_for :event, url: event_path(@event), method: :patch do |f|
       %h2= @event.name
       %h4 All Fields Required
       %hr
-      .medium-6.large-6.columns
+      .medium-12.large-12.columns
         
         .row.collapse
           .small-3.medium-3.large-3.columns
@@ -18,7 +18,7 @@
             %span.prefix
               = f.label :rules
           .small-9.medium-9.large-9.columns
-            = f.text_area :rules, placeholder: "Enter rules for the event"
+            = f.text_area :rules, style: "height: 200px", placeholder: "Enter rules for the event"
 
 
         %h3 Event Head
