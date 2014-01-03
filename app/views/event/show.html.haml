@@ -1,25 +1,28 @@
 .canvas.large-12.columns
-  .medium-7.medium-offset-1.large-7.large-offset-1.columns
-    %br
-    %h1 
-      Rules and regulation 
-      .alert.button= link_to "Edit", edit_event_path(@event.id)
-    %p
-      = @event.rules.html_safe
-    %p
-      Fees : 
-      = @event.fees
-    %h1
-      contact
-    %p
-      = @event.event_head_name
-      %br
-      = @event.event_head_email
-      %br
-      = @event.event_head_mobile
-
+  .medium-8.large-7.large-offset-1.columns
+    %ul.my-orbit{"data-orbit" => ""}
+      %li{"data-orbit-slide" => "rules"}
+        %div.medium-10.medium-offset-1
+          %br
+          %h1
+            Rules and regulation
+            .alert.button= link_to "Edit", edit_event_path(@event.id)
+          %p= @event.rules.html_safe
+          %p
+            Fees : 
+            = @event.fees
+      %li{"data-orbit-slide" => "contact"}
+        %div.medium-10.medium-offset-1
+          %br
+          %h1 Contact
+          %p
+            = @event.event_head_name
+            %br
+            = @event.event_head_email
+            %br
+            = @event.event_head_mobile
 
   .medium-3.medium-offset-1.large-3.large-offset-1.columns
     %br
-    %h1= @event.name
+    %h1= @event.name 
     %img{src: "/assets/#{@event.name.downcase}.png"}
