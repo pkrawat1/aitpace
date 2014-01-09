@@ -17,5 +17,11 @@
 //= require_tree .
 
 $(function(){ 
-  $(document).foundation();
+  $(document).foundation({
+    orbit: {
+      bullets: false,
+      slide_number: false,
+      resume_on_mouseout: true
+    }
+  });
 });
