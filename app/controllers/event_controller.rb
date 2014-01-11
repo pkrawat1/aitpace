@@ -9,13 +9,13 @@ class EventController < ApplicationController
   end
 
   def edit
-    @event = Events.find_by_name(params[:id])
+    @event = Events.find(params[:id])
   end
 
   def update
-    @event = Events.find_by_name(params[:id])
+    @event = Events.find(params[:id])
     if @event.update(params[:event].permit!)
-      redirect_to event_path(params[:id])
+      redirect_to event_path(@event.name)
     else
       render action: "edit"
     end

@@ -1,6 +1,6 @@
 .row
   .panel.form.medium-8.medium-offset-2.large-8.large-offset-2.columns
-    = form_for :event, url: event_path(@event), method: :patch do |f|
+    = form_for :event, url: event_path(@event.id), method: :patch do |f|
       %h2= @event.name
       %h4 All Fields Required
       %hr
