@@ -28,13 +28,13 @@
             %span.prefix
               = f.label :branch
           .small-9.medium-9.large-9.columns
-            = f.text_field :branch, required: "required", placeholder: "Eg. B.E, T.E" 
+            = f.text_field :branch, required: "required", placeholder: "IT/Comp" 
         .row.collapse
           .small-3.medium-3.large-3.columns
             %span.prefix
               = f.label :year
           .small-9.medium-9.large-9.columns
-            = f.text_field :year, required: "required", placeholder: "Enter your Year" 
+            = f.select(:year,options_for_select(["First Year","Second Year","Third Year","Fourth Year","Higher"]))
         .row.collapse
           .small-3.medium-3.large-3.columns
             %span.prefix
@@ -47,7 +47,7 @@
             %span.prefix
               = f.label :event
           .small-9.medium-9.large-9.columns
-            = f.text_field :event, required: "required", placeholder: "Enter Event" 
+            = f.select(:event,options_for_select(@event_names))
         .row.collapse
           .small-3.medium-3.large-3.columns
             %span.prefix
