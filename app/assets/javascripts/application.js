@@ -16,6 +16,7 @@
 //=require foundation/foundation.dropdown
 //=require foundation/foundation.orbit
 //=require foundation/foundation.topbar
+//=require foundation/foundation.abide
 //= require turbolinks
 //= require_tree .
 

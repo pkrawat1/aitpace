@@ -1,6 +1,6 @@
 .row
   .panel.form.medium-10.medium-offset-1.large-10.large-offset-1.columns
-    = form_for :registration, url: registrations_path do |f|
+    = form_for :registration, url: registrations_path, html: {"data-abide" => ""} do |f|
       %h2 Your Details
       %h4 All Fields Required
       %hr
@@ -10,25 +10,29 @@
             %span.prefix
               = f.label :name
           .small-9.medium-9.large-9.columns
-            = f.text_field :name, required: "required", placeholder: "Enter your Name"
+            = f.text_field :name, required: "required", pattern: "[a-zA-Z]{6,}", placeholder: "Enter your full Name"
+            %small.error Must be a string of minimum length 6 .
         .row.collapse
           .small-3.medium-3.large-3.columns
             %span.prefix
               = f.label "Mobile No."
           .small-9.medium-9.large-9.columns
-            = f.text_field :mob_no, required: "required", placeholder: "Eg. 8888888888" 
+            = f.text_field :mob_no, required: "required", pattern: "^[0-9]{10}$", placeholder: "Eg. 8888888888" 
+            %small.error Mobile no must be of 10 digits.
         .row.collapse
           .small-3.medium-3.large-3.columns
             %span.prefix
               = f.label :email
           .small-9.medium-9.large-9.columns
             = f.text_field :email, type: "email", required: "required", placeholder: "Eg. example@gmail.com" 
+            %small.error Email must be valid eg: aitpace@gmail.com
         .row.collapse
           .small-3.medium-3.large-3.columns
             %span.prefix
               = f.label :branch
           .small-9.medium-9.large-9.columns
-            = f.text_field :branch, required: "required", placeholder: "IT/Comp" 
+            = f.text_field :branch, required: "required", pattern: "[a-z]{2,}", placeholder: "IT/Comp" 
+            %small.error Branch is required. 
         .row.collapse
           .small-3.medium-3.large-3.columns
             %span.prefix
@@ -40,7 +44,8 @@
             %span.prefix
               = f.label :college
           .small-9.medium-9.large-9.columns
-            = f.text_field :college, required: "required", placeholder: "Name of College" 
+            = f.text_field :college, required: "required", pattern: "[a-z]{2,}", placeholder: "Name of College" 
+            %small.error College is required
       .medium-6.large-6.columns
         .row.collapse
           .small-3.medium-3.large-3.columns
@@ -53,27 +58,31 @@
             %span.prefix
               = f.label :members
           .small-9.medium-9.large-9.columns
-            = f.text_area :members, required: "required", placeholder: "Name 1, Name 2 etc." 
+            = f.text_area :members, required: "required",pattern: "[a-z]{6,}", placeholder: "Name 1, Name 2 etc." 
+            %small.error Must be a string of minimum length 6 .
         %h2 Staff Details
         %hr
         .row.collapse
           .small-3.medium-3.large-3.columns
             %span.prefix
+              = f.label "Name"
+          .small-9.medium-9.large-9.columns
+            = f.text_field :staff_name, required: "required", pattern: "[a-z]{6,}", placeholder: "Name of Staff" 
+            %small.error Must be a string of minimum length 6 .
+        .row.collapse
+          .small-3.medium-3.large-3.columns
+            %span.prefix
               = f.label "Mobile No."
           .small-9.medium-9.large-9.columns
-            = f.text_field :staff_contact, required: "required", placeholder: "Staff Mobile no." 
+            = f.text_field :staff_contact, required: "required", pattern: "[0-9]{10}", placeholder: "Staff Mobile no." 
+            %small.error Mobile no must be of 10 digits.
         .row.collapse
           .small-3.medium-3.large-3.columns
             %span.prefix
               = f.label "Email"
           .small-9.medium-9.large-9.columns
             = f.text_field :staff_email, type: "email", required: "required", placeholder: "Staff Email" 
-        .row.collapse
-          .small-3.medium-3.large-3.columns
-            %span.prefix
-              = f.label "Name"
-          .small-9.medium-9.large-9.columns
-            = f.text_field :staff_name, required: "required", placeholder: "Name of Staff" 
+            %small.error Email must be valid eg: aitpace@gmail.com
         .row
           .small-4.small-offset-4.medium-4.medium-offset-4.large-4.large-offset-4
             = f.submit "Submit", class: "button primary success"
