@@ -1,6 +1,6 @@
 .row
   .panel.form.medium-8.medium-offset-2.large-8.large-offset-2.columns
-    = form_for :event, url: event_path(@event.id), method: :patch do |f|
+    = form_for :event, url: event_path(@event.id), html: {"data-abide" => ""}, method: :patch do |f|
       %h2= @event.name
       %h4 All Fields Required
       %hr
@@ -11,14 +11,16 @@
             %span.prefix
               = f.label :fees
           .small-9.medium-9.large-9.columns
-            = f.text_field :fees, placeholder: "Enter fees for boys and girls"
-        %h4 use Html br tags in rules
+            = f.text_field :fees, pattern: "[a-z]{4,}", placeholder: "Enter fees for boys and girls"
+            %small.error Must be a sentence of minimum length 4.
+        %h4 Use Html tags in rules
         .row.collapse
           .small-3.medium-3.large-3.columns
             %span.prefix
               = f.label :rules
           .small-9.medium-9.large-9.columns
-            = f.text_area :rules, style: "height: 200px", placeholder: "Enter rules for the event"
+            = f.text_area :rules, style: "height: 200px", pattern: "[a-z]{10,}", placeholder: "Enter rules for the event"
+            %small.error Must be a sentence of minimum length 10.
 
 
         %h3 Event Head
@@ -27,21 +29,24 @@
             %span.prefix
               = f.label "Name"
           .small-9.medium-9.large-9.columns
-            = f.text_field :event_head_name, required: "required", placeholder: "Enter Name"
+            = f.text_field :event_head_name, required: "required", pattern: "[a-zA-Z]{6,}", placeholder: "Enter Name"
+            %small.error Must be a string of minimum length 6 .
       
         .row.collapse
           .small-3.medium-3.large-3.columns
             %span.prefix
               = f.label "Email"
           .small-9.medium-9.large-9.columns
-            = f.text_field :event_head_email, required: "required", placeholder: "Enter email"
+            = f.text_field :event_head_email, type: "email", required: "required", placeholder: "Enter email"
+            %small.error Email must be valid eg: aitpace@gmail.com
       
         .row.collapse
           .small-3.medium-3.large-3.columns
             %span.prefix
               = f.label "Mobile No."
           .small-9.medium-9.large-9.columns
-            = f.text_field :event_head_mobile, placeholder: "Enter  Mobile no"
+            = f.text_field :event_head_mobile, required: "required", pattern: "^[0-9]{10}$", placeholder: "Eg. 8888888888" 
+            %small.error Mobile no must be of 10 digits.
       
       .large-4.large-offset-2.columns
         = f.submit "Update", class: "button"
