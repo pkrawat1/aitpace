@@ -28,9 +28,4 @@ $(function(){
       resume_on_mouseout: true
     }
   });
-  $(".canvas").slideDown(500);
 });
-
-$(window).bind('page:change', function() {
-  $(".canvas").slideDown(500);
-})

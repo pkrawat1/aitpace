@@ -18,13 +18,13 @@
 
         %section.top-bar-section
           %ul.right
-            %li= link_to "HOME", root_path, {"data-no-turbolink" => ""}
+            %li= link_to "HOME", root_path
             %li.has-dropdown
-              = link_to "EVENTS", root_path, {"data-no-turbolink" => ""}
+              = link_to "EVENTS", root_path
               %ul.dropdown
                 - if @events.any?
                   - @events.each do |event|
-                    %li= link_to event.name, event_path(event), "data-no-turbolink" => ""
+                    %li= link_to event.name, event_path(event)
             %li= link_to "SPONSORS", root_path
             %li.active= link_to "REGISTER", new_registration_path
     = yield
