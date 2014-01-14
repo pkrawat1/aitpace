@@ -14,8 +14,8 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //=require foundation/foundation
-//=require foundation/foundation.topbar
 //=require foundation/foundation.orbit
+//=require foundation/foundation.topbar
 //=require foundation/foundation.abide
 //= require turbolinks
 //= require_tree .
