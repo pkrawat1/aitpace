@@ -11,7 +11,7 @@
             %span.prefix
               = f.label :fees
           .small-9.medium-9.large-9.columns
-            = f.text_field :fees, pattern: "[a-zA-Z0-9]{4,}", placeholder: "Enter fees for boys and girls"
+            = f.text_field :fees, pattern: "^[a-zA-Z0-9]{4,}$", placeholder: "Enter fees for boys and girls"
             %small.error Must be a sentence of minimum length 4.
         %h4 Use Html tags in rules
         .row.collapse
@@ -19,7 +19,7 @@
             %span.prefix
               = f.label :rules
           .small-9.medium-9.large-9.columns
-            = f.text_area :rules, style: "height: 200px", pattern: "[a-zA-Z]{6,}", placeholder: "Enter rules for the event"
+            = f.text_area :rules, style: "height: 200px", pattern: "^.{10,}$", placeholder: "Enter rules for the event"
             %small.error Must be a sentence of minimum length 6.
 
 
@@ -29,7 +29,7 @@
             %span.prefix
               = f.label "Name"
           .small-9.medium-9.large-9.columns
-            = f.text_field :event_head_name, required: "required", pattern: "[a-zA-Z]{6,}", placeholder: "Enter Name"
+            = f.text_field :event_head_name, required: "required", pattern: "^[a-zA-Z]{6,}$", placeholder: "Enter Name"
             %small.error Must be a string of minimum length 6 .
       
         .row.collapse
@@ -45,7 +45,7 @@
             %span.prefix
               = f.label "Mobile No."
           .small-9.medium-9.large-9.columns
-            = f.text_field :event_head_mobile, required: "required", pattern: "^[0-9]{10}$", placeholder: "Eg. 8888888888" 
+            = f.text_field :event_head_mobile, required: "required", pattern: "^[1-9][0-9]{9}$", placeholder: "Eg. 8888888888" 
             %small.error Mobile no must be of 10 digits.
       
       .large-4.large-offset-2.columns
