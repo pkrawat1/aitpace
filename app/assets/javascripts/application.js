@@ -13,9 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //=require foundation/foundation
+//=require foundation/foundation.topbar
 //=require foundation/foundation.dropdown
 //=require foundation/foundation.orbit
-//=require foundation/foundation.topbar
 //=require foundation/foundation.abide
 //= require turbolinks
 //= require_tree .
@@ -28,4 +28,5 @@ $(function(){
       resume_on_mouseout: true
     }
   });
+  $(".canvas").animate({top: "0px"});
 });
