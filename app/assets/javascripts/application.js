@@ -28,7 +28,6 @@ $(function(){
       resume_on_mouseout: true
     }
   });
-  $(".canvas").slideDown();
 });
 
 $(window).bind('page:change', function() {
