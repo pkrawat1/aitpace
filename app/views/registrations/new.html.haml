@@ -58,7 +58,7 @@
             %span.prefix
               = f.label :members
           .small-9.medium-9.large-9.columns
-            = f.text_area :members, required: "required",pattern: "^[a-zA-Z\s]{6,}$", placeholder: "Name 1, Name 2 etc." 
+            = f.text_area :members, required: "required",pattern: "^[a-zA-Z\s,\.]{6,}$", placeholder: "Name 1, Name 2 etc." 
             %small.error ERROR: Must be a string of minimum length 6 .
         %h2 Staff Details
         %hr

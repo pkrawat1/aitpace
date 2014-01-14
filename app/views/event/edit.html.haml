@@ -11,15 +11,15 @@
             %span.prefix
               = f.label :fees
           .small-9.medium-9.large-9.columns
-            = f.text_field :fees, pattern: "^[a-zA-Z0-9\s]{4,}$", placeholder: "Enter fees for boys and girls"
-            %small.error Must be a sentence of minimum length 4.
+            = f.text_field :fees, required: "required", placeholder: "Enter fees for boys and girls"
+            %small.error ERROR: Invalid Entry
         %h4 Use Html tags in rules
         .row.collapse
           .small-3.medium-3.large-3.columns
             %span.prefix
               = f.label :rules
           .small-9.medium-9.large-9.columns
-            = f.text_area :rules, style: "height: 200px", pattern: "^.{10,}$", placeholder: "Enter rules for the event"
+            = f.text_area :rules, style: "height: 200px", required: "required", placeholder: "Enter rules for the event"
             %small.error Write rules using ol,li tags.
 
 
