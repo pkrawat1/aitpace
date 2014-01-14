@@ -3,6 +3,7 @@ Aitpace::Application.routes.draw do
   resources :event
   get "event/index"
   get "home/index"
+  get "home/pace_admin"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
