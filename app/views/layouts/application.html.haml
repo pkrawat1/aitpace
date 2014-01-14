@@ -26,6 +26,6 @@
                   - @events.each do |event|
                     %li= link_to event.name, event_path(event)
             %li= link_to "SPONSORS", root_path
-            %li.active= link_to "REGISTER", new_registration_path
+            %li.active= link_to "REGISTER", new_registration_path, "data-no-turbolink" => ""
     = yield
     = javascript_include_tag "application"
