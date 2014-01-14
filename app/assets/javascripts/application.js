@@ -28,5 +28,9 @@ $(function(){
       resume_on_mouseout: true
     }
   });
-  $(".my-orbit").fadeIn(500);
+  $(".canvas").slideDown();
 });
+
+$(window).bind('page:change', function() {
+  $(".canvas").slideDown();
+})
