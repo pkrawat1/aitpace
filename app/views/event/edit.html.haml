@@ -11,7 +11,7 @@
             %span.prefix
               = f.label :fees
           .small-9.medium-9.large-9.columns
-            = f.text_field :fees, pattern: "^[a-zA-Z0-9]{4,}$", placeholder: "Enter fees for boys and girls"
+            = f.text_field :fees, pattern: "^[a-zA-Z0-9\s]{4,}$", placeholder: "Enter fees for boys and girls"
             %small.error Must be a sentence of minimum length 4.
         %h4 Use Html tags in rules
         .row.collapse
@@ -20,7 +20,7 @@
               = f.label :rules
           .small-9.medium-9.large-9.columns
             = f.text_area :rules, style: "height: 200px", pattern: "^.{10,}$", placeholder: "Enter rules for the event"
-            %small.error Must be a sentence of minimum length 6.
+            %small.error Write rules using ol,li tags.
 
 
         %h3 Event Head
@@ -29,8 +29,8 @@
             %span.prefix
               = f.label "Name"
           .small-9.medium-9.large-9.columns
-            = f.text_field :event_head_name, required: "required", pattern: "^[a-zA-Z]{6,}$", placeholder: "Enter Name"
-            %small.error Must be a string of minimum length 6 .
+            = f.text_field :event_head_name, required: "required", pattern: "^[a-zA-Z\s]{6,}$", placeholder: "Enter Name"
+            %small.error ERROR: Invalid name.
       
         .row.collapse
           .small-3.medium-3.large-3.columns
@@ -38,15 +38,15 @@
               = f.label "Email"
           .small-9.medium-9.large-9.columns
             = f.text_field :event_head_email, type: "email", required: "required", placeholder: "Enter email"
-            %small.error Email must be valid eg: aitpace@gmail.com
+            %small.error ERROR: Email must be valid eg: aitpace@gmail.com
       
         .row.collapse
           .small-3.medium-3.large-3.columns
             %span.prefix
               = f.label "Mobile No."
           .small-9.medium-9.large-9.columns
-            = f.text_field :event_head_mobile, required: "required", pattern: "^[1-9][0-9]{9}$", placeholder: "Eg. 8888888888" 
-            %small.error Mobile no must be of 10 digits.
+            = f.text_field :event_head_mobile, required: "required", pattern: "^[7-9][0-9]{9}$", placeholder: "Eg. 8888888888" 
+            %small.error ERROR: Invalid Mobile No.
       
       .large-4.large-offset-2.columns
         = f.submit "Update", class: "button"
