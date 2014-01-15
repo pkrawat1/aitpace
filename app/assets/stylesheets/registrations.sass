@@ -1,10 +1,10 @@
-@keyframes myfirst
+@keyframes drop_animation
   from 
     top: -1000px
   to 
     top: 0px
 
-@-webkit-keyframes myfirst /* Safari and Chrome */
+@-webkit-keyframes drop_animation /* Safari and Chrome */
   from 
     top: -1000px
   to 
@@ -20,3 +20,4 @@
     text-align: center
   h4
     color: red
+  @include animate(drop_animation, 1s)
