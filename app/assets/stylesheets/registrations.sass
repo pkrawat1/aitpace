@@ -1,3 +1,19 @@
+@keyframes myfirst
+  from 
+    top: -1000px
+  to 
+    top: 0px
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+  from 
+    top: -1000px
+  to 
+    top: 0px
+
+@mixin animate($name, $time)
+  animation: $name $time
+  -webkit-animation: $name $time
+
 .form
   margin-top: 3%
   h2
