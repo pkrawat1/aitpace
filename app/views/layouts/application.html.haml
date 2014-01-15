@@ -2,6 +2,8 @@
   %head
     %meta{charset: "utf-8"}
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
+    %meta{name: "aitpace 2014", content: "PACE is an event that provides an excellent opportunity for students of various colleges in Pune to get acquainted with each other, exhibit their competitive spirits and in the true spirit of sportsmanship take victory and defeat in their stride."}
+
     %title= content_for?(:title) ? yield(:title) : "AIT PACE 2014"
     = stylesheet_link_tag    "application"
     = javascript_include_tag "vendor/modernizr"
@@ -28,4 +30,6 @@
             %li.active= link_to "REGISTER", new_registration_path
             %li= link_to "CONTACT US", home_contact_path
     = yield
+    .footer
+      Copyright &copy 2014 AIT pune. All Rights Reserved.
     = javascript_include_tag "application"
