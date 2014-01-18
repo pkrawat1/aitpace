@@ -1,4 +1,6 @@
 .panel.medium-10.medium-offset-1.large-8.large-offset-2.columns{style: "margin-top:3%"}
+  
+  %h3 Details for Event pages
   %table.large-12.columns
     %th Event Name
     %th Event Head
@@ -10,3 +12,20 @@
           %td= event.event_head_name
           %td
             = link_to "Edit", edit_event_path(event.id), class: "button tiny"
+
+  %h3 Details for contact page
+  %table.large-12.columns
+    %th Name
+    %th Designation
+    %th Action
+    - if @secretories.any?
+      - @secretories.each do |secretory|
+        %tr
+          %td= secretory.name
+          %td= secretory.designation
+          %td
+            = link_to "Edit", edit_secretory_path(secretory.id), class: "button tiny" 
+            = link_to "Delete", secretory_path(secretory.id), method: :delete, data: { confirm: 'Are you sure ?'}, class: "button tiny alert" 
+    %tr
+      %td
+        = link_to "Add Secretory", new_secretory_path, class: "button"

@@ -1,8 +1,5 @@
 class EventController < ApplicationController
   http_basic_authenticate_with name: "pankaj", password: "pkrawat", except: :show
-  
-  def new
-  end
 
   def show
     @event = Events.find_by_name(params[:id])

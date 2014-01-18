@@ -1,6 +1,7 @@
 Aitpace::Application.routes.draw do
   resources :registrations
   resources :event
+  resources :secretories
   get "event/index"
   get "home/index"
   get "home/pace_admin"
