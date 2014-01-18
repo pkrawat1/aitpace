@@ -1,9 +1,11 @@
 .canvas.medium-12.large-12.columns
   - if @secretories.any?
     - @secretories.each do |secretory|
-      .medium-3.medium-offset-1.large-3.large-offset-1.columns
-        %img{src: secretory.img_src}
-        %h3= secretory.designation
-        %p= secretory.name
-        %p= secretory.email
-        %p= secretory.mob_no
+      .contact.form.medium-4.medium-offset-2.large-4.large-offset-2.columns
+        %img.large-3.columns{src: secretory.img_src}
+        .large-9.form.columns  
+          %p
+            = secretory.name
+            %br= secretory.designation
+            = secretory.email
+            %br= secretory.mob_no
