@@ -1,7 +1,7 @@
-.canvas.large-12.columns
+.canvas.medium-12.large-12.columns
   - if @secretories.any?
     - @secretories.each do |secretory|
-      .large-3.columns
+      .medium-3.medium-offset-1.large-3.large-offset-1.columns
         %img{src: secretory.img_src}
         %h3= secretory.designation
         %h4= secretory.name
