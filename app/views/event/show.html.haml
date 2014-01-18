@@ -3,7 +3,6 @@
     %ul.my-orbit{"data-orbit" => ""}
       %li{"data-orbit-slide" => "rules"}
         %div.medium-10.medium-offset-1
-          %br
           %h1
             Rules and regulation
           %p= @event.rules.html_safe
@@ -12,7 +11,6 @@
             = @event.fees
       %li{"data-orbit-slide" => "contact"}
         %div.medium-10.medium-offset-1
-          %br
           %h1 Contact
           %p
             = @event.event_head_name
@@ -22,6 +20,5 @@
             = @event.event_head_mobile
 
   .medium-3.medium-offset-1.large-3.large-offset-1.columns
-    %br
     %h1= @event.name 
     %img{src: "/assets/#{@event.name.downcase}.png"}

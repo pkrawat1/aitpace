@@ -5,8 +5,8 @@
 
 .canvas
   margin-top: 1%
-  min-height: 60%
-  height: auto
+  padding: 5% 0%
+  margin-bottom: 10%
   background: url("logo.png")  center no-repeat rgba(0,140,186, 0.3)
   h1
     @include header(white,40px)
@@ -15,10 +15,19 @@
     @include header(white,20px)
 
 .footer
-  padding: 1% 0%
-  position: fixed
   text-align: center
   @include header(white, 10px)
-  bottom: 0px
-  width: 100%
-  background: rgba(black,0.3)
+  h3
+    @include header(white,30px)
+  p
+    @include header(white,15px)
+  a
+    @include header(white,15px)
+  .medium-4 
+    padding-bottom: 2%
+  .medium-12
+    background: rgba(0,0,0,.5)
+    padding-bottom: 2%
+
+body
+  height: auto

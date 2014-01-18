@@ -26,11 +26,32 @@
               %ul.dropdown
                 - if @events.any?
                   - @events.each do |event|
-                    %li= link_to event.name, event_path(event)
+                    %li= link_to event.name.upcase, event_path(event)
             %li= link_to "SPONSORS", root_path
             %li.active= link_to "REGISTER", new_registration_path
             %li= link_to "CONTACT US", home_contact_path
     = yield
     .footer
-      Copyright &copy 2014 AIT pune. All Rights Reserved.
+      .medium-12.columns
+        .medium-4.columns
+          %h3 Contact Us
+          %h1
+            %a{href: "https://facebook.com/aitpace2014"} Facebook
+        
+        .medium-4.columns
+          %h3 Events
+          - if @events.any?
+            -@events.each do |event|
+              .medium-4.columns
+                = link_to event.name, event_path(event)
+        
+        .medium-4.columns
+          %h3 About
+          %p
+            We at AIT, strive for excellence in providing the right environment for development of physical, intellectual, emotional and spiritual quotients with a view to produce total quality engineers, preparing them to face challenges of the modern information society.
+
+      .medium-12.columns
+        .medium-6.medium-centered.columns
+          Copyright &copy 2014 AIT pune. All Rights Reserved.
+    
     = javascript_include_tag "application"
