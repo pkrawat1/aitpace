@@ -1,10 +1,12 @@
 .canvas.medium-12.large-12.columns
   - if @secretories.any?
+    - flag = 0
     - @secretories.each do |secretory|
+      %br
       .contact.form.medium-4.medium-offset-2.large-4.large-offset-2.columns
         %img.large-3.columns{src: secretory.img_src}
         .large-9.form.columns  
-          %p
+          %h1{style: "font-size: 20px"}
             = secretory.name
             %br= secretory.designation
             = secretory.email
