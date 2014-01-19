@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  http_basic_authenticate_with name: "pankaj", password: "pkrawat",only: :pace_admin
+  http_basic_authenticate_with name: User.first.name, password: User.first.password,only: :pace_admin
   def index
   end
 
