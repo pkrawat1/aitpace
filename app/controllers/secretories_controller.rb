@@ -1,5 +1,5 @@
 class SecretoriesController < ApplicationController
-  http_basic_authenticate_with name: "pankaj", password: "pkrawat"
+  http_basic_authenticate_with name: User.first.name, password: User.first.password,only: :pace_admin
 
   def new
     @secretory = Secretory.new
