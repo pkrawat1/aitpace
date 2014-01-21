@@ -47,5 +47,6 @@
             = f.text_field :img_src, required: "required", placeholder: "example: https://abc.com/abc.jpg"
             %small.error ERROR: Invalid url
       
-      .medium-1.medium-offset-5.large-1.large-offset-5.large-centered
-        = f.submit "Submit", class: "button success"
+      .row
+        .medium-1.medium-offset-5.large-1.large-offset-5.large-centered
+          = f.submit "Submit", class: "button success"
