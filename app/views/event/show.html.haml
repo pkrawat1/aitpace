@@ -1,5 +1,5 @@
 .canvas.large-12.columns
-  .medium-8.rules.large-7.large-offset-1.columns
+  .medium-8.glide_left.large-7.large-offset-1.columns
     %ul.my-orbit{"data-orbit" => ""}
       %li{"data-orbit-slide" => "rules"}
         %div.medium-10.medium-offset-1
@@ -21,6 +21,6 @@
             %br
             = @event.event_head_mobile
 
-  .medium-3.event_image.medium-offset-1.large-3.large-offset-1.columns
+  .medium-3.glide_right.medium-offset-1.large-3.large-offset-1.columns
     %h1= @event.name 
     %img{src: "/assets/#{@event.name.downcase}.png"}
