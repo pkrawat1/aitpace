@@ -1,2 +1,21 @@
 ol
   color: white
+
+@keyframes glide_left
+  from 
+    left: -1000px
+  to 
+    left: 0px
+
+@-webkit-keyframes glide_left /* Safari and Chrome */
+  from 
+    left: -1000px
+  to 
+    left: 0px
+
+@mixin animate($name, $time)
+  animation: $name $time
+  -webkit-animation: $name $time
+
+.rules
+  @include animate(glide_left,1s)
