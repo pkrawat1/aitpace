@@ -1,12 +1,16 @@
 @keyframes drop_animation
   0% 
     top: -1000px
+  50%
+    top: 100px
   100% 
     top: 0px
 
 @-webkit-keyframes drop_animation /* Safari and Chrome */
   0% 
     top: -1000px
+  50%
+    top: 100px
   100% 
     top: 0px
 
@@ -19,4 +23,4 @@
     text-align: center
   h4
     color: red
-  @include animate(drop_animation, 1s)
+  @include animate(drop_animation, 1.5s)
