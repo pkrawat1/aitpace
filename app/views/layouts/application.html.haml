@@ -27,7 +27,6 @@
                 - if @events.any?
                   - @events.each do |event|
                     %li= link_to event.name.upcase, event_path(event)
-            %li= link_to "SPONSORS", root_path
             %li.active= link_to "REGISTER", new_registration_path
             %li= link_to "CONTACT US", home_contact_path
     = yield
