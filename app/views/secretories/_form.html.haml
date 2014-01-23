@@ -1,7 +1,7 @@
 .row
   .panel.form.medium-8.medium-offset-2.large-8.large-offset-2.columns
     = form_for @secretory, html: {"data-abide" => ""} do |f|
-      %h2 Pace Secretory Details
+      %h2 Pace Secretary Details
       %h4 All Fields Required
       %hr
       .medium-12.large-12.columns
@@ -13,7 +13,7 @@
               = f.label "Name"
           .small-9.medium-9.large-9.columns
             = f.text_field :name, required: "required", pattern: "^[a-zA-Z\s]{6,}$", placeholder: "Enter Name"
-            %small.error ERROR: Invalid name.
+            %small.error ERROR: must be more than 6 characters
       
         .row.collapse
           .small-3.medium-3.large-3.columns
@@ -36,7 +36,7 @@
             %span.prefix
               = f.label "Designation"
           .small-9.medium-9.large-9.columns
-            = f.text_field :designation, required: "required", placeholder: "example: Sports Secretory"
+            = f.text_field :designation, required: "required", placeholder: "example: Sports Secretary"
             %small.error ERROR: Invalid Entry
       
         .row.collapse
