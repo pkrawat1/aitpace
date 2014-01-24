@@ -5,7 +5,6 @@
         %div.medium-10.medium-offset-1
           %h1
             Rules and regulation
-          
           %h1= @event.rules.html_safe
           
           %p
@@ -23,4 +22,5 @@
 
   .medium-3.glide_right.medium-offset-1.large-3.large-offset-1.columns
     %h1= @event.name 
+    %hr
     %img{src: "/assets/#{@event.name.downcase}.png"}
