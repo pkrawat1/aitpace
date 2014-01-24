@@ -1,4 +1,6 @@
+$green: rgb(0,140,180)
 @mixin header($color,$fsize)
+  text-shadow: 5px 0px 10px black
   color: $color
   font-size: $fsize
   font-weight: 300
@@ -6,12 +8,13 @@
 .name
   h2
     @include header(white,40px)
+    text-shadow: 5px 0px 10px black
     font-weight: 500
 
 .canvas
   padding: 1% 0%
   margin-bottom: 10%
-  background: rgba(0,140,186, 0.3)
+  background: url('flag.png') no-repeat center rgba($green, 0.3)
   h1,h2,h3,h4
     @include header(white,40px)
   p,a
