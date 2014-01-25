@@ -1,0 +1,13 @@
+.panel.medium-10.medium-offset-1.large-8.large-offset-2.columns{style: "margin-top:3%"}
+  
+  %h3 Registrations Done
+  %table.large-12.columns
+    %th Name
+    %th Mobile No.
+    - if @teams.any?
+      - @teams.each do |team|
+        %tr
+          %td= team.name
+          %td= team.mob_no
+          %td= team.college
+          %td= team.event

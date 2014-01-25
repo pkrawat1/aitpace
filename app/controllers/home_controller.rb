@@ -9,4 +9,8 @@ class HomeController < ApplicationController
   def contact
   end
   
+  def registrations
+    @teams = Registration.all(order: :event)
+  end
+
 end
