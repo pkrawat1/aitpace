@@ -17,4 +17,4 @@
 #Events.create(name:"Chess", fees: 200, rules: "Play safe", event_head_name: "ABCD", event_head_mobile: 8796354568, event_head_email: "example8@gmail.com")
 #Events.create(name:"Squash", fees: 500, rules: "Play safe", event_head_name: "ABCD", event_head_mobile: 8796354568, event_head_email: "example9@gmail.com")
 
-User.create(name: "default", password: 'password')
+#User.create(name: "default", password: 'password')
