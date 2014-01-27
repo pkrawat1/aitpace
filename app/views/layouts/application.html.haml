@@ -38,6 +38,12 @@
                 - if @events.any?
                   - @events.each do |event|
                     %li= link_to event.name.upcase, event_path(event)
+            %li.has-dropdown
+              = link_to "ATHLETICS", root_path
+              %ul.dropdown
+                - if @athletics.any?
+                  - @athletics.each do |event|
+                    %li= link_to event.name.upcase, athletic_path(event)
             %li.active= link_to "REGISTER", new_registration_path
             %li= link_to "CONTACT US", home_contact_path
     = yield

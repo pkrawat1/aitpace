@@ -1,0 +1,52 @@
+.row
+  .panel.form.medium-8.medium-offset-2.large-8.large-offset-2.columns
+    = form_for :event, url: athletic_path(@event.id), html: {"data-abide" => ""}, method: :patch do |f|
+      %h2= @event.name
+      %h4 All Fields Required
+      %hr
+      .medium-12.large-12.columns
+        
+        .row.collapse
+          .small-3.medium-3.large-3.columns
+            %span.prefix
+              = f.label :fees
+          .small-9.medium-9.large-9.columns
+            = f.text_field :fees, required: "required", placeholder: "Enter fees for boys and girls"
+            %small.error ERROR: Invalid Entry
+        %h4 Use Html tags in rules
+        .row.collapse
+          .small-3.medium-3.large-3.columns
+            %span.prefix
+              = f.label :rules
+          .small-9.medium-9.large-9.columns
+            = f.text_area :rules, style: "height: 200px", required: "required", placeholder: "Enter rules for the event"
+            %small.error Write rules using ol,li tags.
+
+
+        %h3 Event Head
+        .row.collapse
+          .small-3.medium-3.large-3.columns
+            %span.prefix
+              = f.label "Name"
+          .small-9.medium-9.large-9.columns
+            = f.text_field :event_head_name, required: "required", pattern: "^[a-zA-Z\s]{6,}$", placeholder: "Enter Name"
+            %small.error ERROR: Invalid name.
+      
+        .row.collapse
+          .small-3.medium-3.large-3.columns
+            %span.prefix
+              = f.label "Email"
+          .small-9.medium-9.large-9.columns
+            = f.text_field :event_head_email, type: "email", required: "required", placeholder: "Enter email"
+            %small.error ERROR: Email must be valid eg: aitpace@gmail.com
+      
+        .row.collapse
+          .small-3.medium-3.large-3.columns
+            %span.prefix
+              = f.label "Mobile No."
+          .small-9.medium-9.large-9.columns
+            = f.text_field :event_head_mobile, required: "required", pattern: "^[7-9][0-9]{9}$", placeholder: "Eg. 8888888888" 
+            %small.error ERROR: Invalid Mobile No.
+      
+      .large-4.large-offset-2.columns
+        = f.submit "Update", class: "button"

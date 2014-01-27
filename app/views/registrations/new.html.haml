@@ -17,7 +17,7 @@
             %span.prefix
               = f.label "Mobile No."
           .small-9.medium-9.large-9.columns
-            = f.text_field :mob_no, required: "required", pattern: "^[7-9][0-9]{9}$", placeholder: "Eg. 8888888888" 
+            = f.text_field :mob_no, required: "required", maxlength: "10" , pattern: "^[7-9][0-9]{9}$", placeholder: "Eg. 8888888888" 
             %small.error ERROR: Invalid mobile number.
         .row.collapse
           .small-3.medium-3.large-3.columns
@@ -74,7 +74,7 @@
             %span.prefix
               = f.label "Mobile No."
           .small-9.medium-9.large-9.columns
-            = f.text_field :staff_contact, required: "required", pattern: "^[7-9][0-9]{9}$", placeholder: "Staff Mobile no." 
+            = f.text_field :staff_contact, required: "required", maxlength: "10", pattern: "^[7-9][0-9]{9}$", placeholder: "Staff Mobile no." 
             %small.error ERROR: Invalid Mobile number.
         .row.collapse
           .small-3.medium-3.large-3.columns

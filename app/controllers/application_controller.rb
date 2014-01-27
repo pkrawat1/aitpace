@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_filter do
     @events = Events.all
+    @athletics = Athletics.all
     @secretories = Secretory.all
   end
 end

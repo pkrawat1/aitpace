@@ -17,4 +17,16 @@
 #Events.create(name:"Chess", fees: 200, rules: "Play safe", event_head_name: "ABCD", event_head_mobile: 8796354568, event_head_email: "example8@gmail.com")
 #Events.create(name:"Squash", fees: 500, rules: "Play safe", event_head_name: "ABCD", event_head_mobile: 8796354568, event_head_email: "example9@gmail.com")
 
+
+
+
+Athletics.create(name:"100m", fees: "75", rules: "Play safe", event_head_name: "Sourav Kumar", event_head_mobile: 8698734118, event_head_email: "souravkumarsharma@outlook.com")
+Athletics.create(name:"200m", fees: "75", rules: "Play safe", event_head_name: "Vaishali Chauhan", event_head_mobile: 9158006737, event_head_email: "souravkumarsharma@outlook.com")
+Athletics.create(name:"400m", fees: "75", rules: "Play safe", event_head_name: "Niraj Singh", event_head_mobile: 8412813098, event_head_email: "example1@gmail.com")
+Athletics.create(name:"4*100m Relay", fees: "200 per team", rules: "Play safe", event_head_name: "Vaishali Chauhan", event_head_mobile: 9158006737, event_head_email: "example1@gmail.com")
+Athletics.create(name:"4*400m Relay", fees: "200 per team", rules: "Play safe", event_head_name: "Sourav Kumar", event_head_mobile: 8698734118, event_head_email: "souravkumarsharma@outlook.com")
+Athletics.create(name:"Long jump", fees: "75", rules: "Play safe", event_head_name: "Niraj Singh", event_head_mobile: 8412813098, event_head_email: "example1@gmail.com")
+Athletics.create(name:"Shot put", fees: "75", rules: "Play safe", event_head_name: "Niraj singh", event_head_mobile: 8412813098, event_head_email: "example1@gmail.com")
+Athletics.create(name:"1500m", fees: "100", rules: "Play safe", event_head_name: "Niraj singh", event_head_mobile: 8412813098, event_head_email: "example1@gmail.com")
+Athletics.create(name:"5000m", fees: "75", rules: "Play safe", event_head_name: "Niraj singh", event_head_mobile: 8412813098, event_head_email: "example1@gmail.com")
 #User.create(name: "default", password: 'password')

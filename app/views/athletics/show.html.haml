@@ -1,0 +1,25 @@
+.canvas.large-12.columns
+  .medium-8.glide_left.large-7.large-offset-1.columns
+    %ul.my-orbit{"data-orbit" => ""}
+      %li{"data-orbit-slide" => "1-slide"}
+        %div.medium-10.medium-offset-1
+          %h1
+            Rules and regulation
+          %h1.rules= @event.rules.html_safe
+          
+          %p.label
+            Fees : 
+            = @event.fees
+      %li{"data-orbit-slide" => "2-slide"}
+        %div.medium-10.medium-offset-1
+          %h1 Contact
+          %p
+            = @event.event_head_name
+            %br
+            = @event.event_head_email
+            %br
+            = @event.event_head_mobile
+
+  .medium-3.glide_right.medium-offset-1.large-3.large-offset-1.columns
+    %h1= @event.name 
+    %img{src: "/assets/athletics.png"}
