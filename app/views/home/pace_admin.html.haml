@@ -44,20 +44,3 @@
     %tr
       %td
         = link_to "Add Secretary", new_secretory_path, class: "button"
-
-  %h3 Details for contact page
-  %table.large-12.columns
-    %th Name
-    %th Designation
-    %th Action
-    - if @secretories.any?
-      - @secretories.each do |secretory|
-        %tr
-          %td= secretory.name
-          %td= secretory.designation
-          %td
-            = link_to "Edit", edit_secretory_path(secretory.id), class: "button tiny" 
-            = link_to "Delete", secretory_path(secretory.id), method: :delete, data: { confirm: 'Are you sure ?'}, class: "button tiny alert" 
-    %tr
-      %td
-        = link_to "Add Secretary", new_secretory_path, class: "button"
