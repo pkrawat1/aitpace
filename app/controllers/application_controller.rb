@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   before_filter do
     @events = Events.all
     @athletics = Athletics.all
-    @secretories = Secretory.all
+    @secretories = Secretory.all(:order => "created_at DESC")
   end
 end
