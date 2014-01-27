@@ -1,9 +1,26 @@
 $green: rgb(0,140,180)
+
+@keyframes fade_in
+  0% 
+    opacity: 0
+  100% 
+    opacity: 1
+
+@-webkit-keyframes fade_in /* Safari and Chrome */
+  0% 
+    opacity: 0
+  100% 
+    opacity: 1
+
 @mixin header($color,$fsize)
   text-shadow: 5px 0px 10px black
   color: $color
   font-size: $fsize
   font-weight: 300
+
+@mixin animate($name, $time)
+  animation: $name $time
+  -webkit-animation: $name $time
 
 .name
   h2
@@ -67,3 +84,6 @@ $green: rgb(0,140,180)
   overflow-y: hidden
   &:hover
     overflow-y: scroll
+
+.fade_in
+  @include animate(fade_in,2s)   
