@@ -51,17 +51,22 @@
       .medium-12.columns
         .medium-3.columns
           %h3 Contact Us
-          .fb-like-box{height: "70px", "data-colorscheme" => "dark", "data-header" => "false", "data-href" => "http://www.facebook.com/pace2014", "data-show-border" => "false", "data-show-faces" => "false", "data-stream" => "false"}
+          %a.show-for-small-only{href:"https://www.facebook.com/pace2014"}
+            Pace 2014
+            %sup.label.radius.tiny
+              @facebook
+          .fb-like-box.hide-for-small-only{height: "70px", "data-colorscheme" => "dark", "data-header" => "false", "data-href" => "http://www.facebook.com/pace2014", "data-show-border" => "false", "data-show-faces" => "false", "data-stream" => "false"}
         
         .medium-6.columns
           %h3 Events
+          %hr
           - if @events.any?
             - @events.each do |event|
-              .medium-3.columns
+              .small-4.medium-3.columns
                 = link_to event.name, event_path(event)
           - if @athletics.any?
             - @athletics.each do |event|
-              .medium-3.columns
+              .small-4.medium-3.columns
                 = link_to event.name, athletic_path(event)
         
         .medium-3.columns
@@ -69,6 +74,16 @@
           %p
             Pace is an intercollegiate sports fest organized by 
             %a.label.radius{href: "http://www.aitpune.com", style: "margin: auto"}Army Institute of Technology
+        .row
+          .medium-6.medium-centered.columns
+            %hr
+            .small-4.columns
+              = link_to "HOME", root_path
+            .small-4.columns
+              = link_to "REGISTER", new_registration_path
+            .small-4.columns
+              = link_to "CONTACT US", home_contact_path
+        %hr
         .row
           .medium-6.medium-centered.columns
             Copyright &copy 2014 AIT pune. All Rights Reserved.
