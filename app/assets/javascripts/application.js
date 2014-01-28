@@ -17,7 +17,6 @@
 //=require foundation/foundation.orbit
 //=require foundation/foundation.topbar
 //=require foundation/foundation.abide
-//=require foundation/foundation.offcanvas
 //= require turbolinks
 //= require_tree .
 

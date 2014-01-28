@@ -20,10 +20,10 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     .contain-to-grid.sticky.centered
-      %nav.top-bar.hide-for-small-only{"data-topbar" => ""}
+      %nav.top-bar{"data-topbar" => ""}
         %ul.title-area
           %li.name.medium-offset-1.large-offset-1
-            %h2{style: "word-spacing: 50px"}
+            %h2.hide-for-small-only{style: "word-spacing: 50px"}
               %br
               Pace 2014
           %li.toggle-topbar.menu-icon
@@ -46,38 +46,7 @@
                     %li= link_to event.name.upcase, athletic_path(event)
             %li.active= link_to "REGISTER", new_registration_path
             %li= link_to "CONTACT US", home_contact_path
-    .off-canvas-wrap.show-for-small-only
-      .inner-wrap
-        %nav.tab-bar
-          %section.right-small
-            %a.right-off-canvas-toggle.menu-icon
-              %span
-          %section.left.tab-bar-section
-            %h1.title Pace 2014
-          %aside.right-off-canvas-menu
-            %ul.off-canvas-list
-              %li
-                %label Menu
-              %li= link_to "HOME", root_path
-              %li.has-dropdown
-                = link_to "EVENTS", root_path
-                %ul.dropdown
-                  - if @events.any?
-                    - @events.each do |event|
-                      %li= link_to event.name.upcase, event_path(event)
-              %li.has-dropdown
-                = link_to "ATHLETICS", root_path
-                %ul.dropdown
-                  - if @athletics.any?
-                    - @athletics.each do |event|
-                      %li= link_to event.name.upcase, athletic_path(event)
-              %li.active= link_to "REGISTER", new_registration_path
-          %section.main-section
-            .row{style: "height: 50px"}
-            = yield  
-          %a.exit-off-canvas
-    .hide-for-small-only      
-      = yield
+    = yield
     .footer
       .medium-12.columns
         .medium-3.columns
