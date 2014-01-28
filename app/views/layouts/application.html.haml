@@ -20,7 +20,7 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     .contain-to-grid.sticky.centered
-      %nav.top-bar{"data-topbar" => ""}
+      %nav.top-bar.hide-for-small-only{"data-topbar" => ""}
         %ul.title-area
           %li.name.medium-offset-1.large-offset-1
             %h2{style: "word-spacing: 50px"}
@@ -46,21 +46,56 @@
                     %li= link_to event.name.upcase, athletic_path(event)
             %li.active= link_to "REGISTER", new_registration_path
             %li= link_to "CONTACT US", home_contact_path
-    = yield
+    .off-canvas-wrap.show-for-small-only
+      .inner-wrap
+        %nav.tab-bar
+          %section.right-small
+            %a.right-off-canvas-toggle.menu-icon
+              %span
+          %section.left.tab-bar-section
+            %h1.title Pace 2014
+          %aside.right-off-canvas-menu
+            %ul.off-canvas-list
+              %li
+                %label Menu
+              %li= link_to "HOME", root_path
+              %li.has-dropdown
+                = link_to "EVENTS", root_path
+                %ul.dropdown
+                  - if @events.any?
+                    - @events.each do |event|
+                      %li= link_to event.name.upcase, event_path(event)
+              %li.has-dropdown
+                = link_to "ATHLETICS", root_path
+                %ul.dropdown
+                  - if @athletics.any?
+                    - @athletics.each do |event|
+                      %li= link_to event.name.upcase, athletic_path(event)
+              %li.active= link_to "REGISTER", new_registration_path
+          %section.main-section
+            .row{style: "height: 50px"}
+            = yield  
+          %a.exit-off-canvas
+    .hide-for-small-only      
+      = yield
     .footer
       .medium-12.columns
-        .medium-4.columns
+        .medium-3.columns
           %h3 Contact Us
           .fb-like-box{height: "70px", "data-colorscheme" => "dark", "data-header" => "false", "data-href" => "http://www.facebook.com/pace2014", "data-show-border" => "false", "data-show-faces" => "false", "data-stream" => "false"}
         
-        .medium-4.columns
+        .medium-6.columns
           %h3 Events
           - if @events.any?
-            -@events.each do |event|
-              .medium-4.columns
+            - @events.each do |event|
+              .medium-3.columns
                 = link_to event.name, event_path(event)
+          - if @athletics.any?
+            - @athletics.each do |event|
+              .medium-3.columns
+                = link_to event.name, athletic_path(event)
         
-        .medium-4.columns
+        .medium-3.columns
           %h3 About
           %p
             Pace is an intercollegiate sports fest organized by 
