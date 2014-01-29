@@ -50,21 +50,21 @@
         
         %section.top-bar-section.show-for-small-only
           %ul.right
-            %li= link_to "HOME", "data-no-turbolink" => true, root_path
+            %li= link_to "HOME", root_path, "data-no-turbolink" => true
             %li.has-dropdown
-              = link_to "EVENTS", "data-no-turbolink" => true, root_path
+              = link_to "EVENTS", root_path, "data-no-turbolink" => true
               %ul.dropdown
                 - if @events.any?
                   - @events.each do |event|
-                    %li= link_to event.name.upcase, "data-no-turbolink" => true, event_path(event)
+                    %li= link_to event.name.upcase, event_path(event), "data-no-turbolink" => true
             %li.has-dropdown
-              = link_to "ATHLETICS", root_path
+              = link_to "ATHLETICS", root_path, "data-no-turbolink" => true
               %ul.dropdown
                 - if @athletics.any?
                   - @athletics.each do |event|
-                    %li= link_to event.name.upcase, "data-no-turbolink" => true, athletic_path(event)
-            %li.active= link_to "REGISTER", "data-no-turbolink" => true, new_registration_path
-            %li= link_to "CONTACT US", "data-no-turbolink" => true, home_contact_path
+                    %li= link_to event.name.upcase, athletic_path(event), "data-no-turbolink" => true
+            %li.active= link_to "REGISTER", new_registration_path, "data-no-turbolink" => true
+            %li= link_to "CONTACT US", home_contact_path, "data-no-turbolink" => true
     
     = yield
     .footer
