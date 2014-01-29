@@ -27,9 +27,10 @@
               %br
               Pace 2014
           %li.toggle-topbar.menu-icon
-            %a{"data-no-turbolink" => true} 
+            %a 
               %span Menu
-        %section.top-bar-section
+        
+        %section.top-bar-section.hide-for-small-only
           %ul.right
             %li= link_to "HOME", root_path
             %li.has-dropdown
@@ -46,6 +47,25 @@
                     %li= link_to event.name.upcase, athletic_path(event)
             %li.active= link_to "REGISTER", new_registration_path
             %li= link_to "CONTACT US", home_contact_path
+        
+        %section.top-bar-section.show-for-small-only
+          %ul.right
+            %li= link_to "HOME", "data-no-turbolink" => true, root_path
+            %li.has-dropdown
+              = link_to "EVENTS", "data-no-turbolink" => true, root_path
+              %ul.dropdown
+                - if @events.any?
+                  - @events.each do |event|
+                    %li= link_to event.name.upcase, "data-no-turbolink" => true, event_path(event)
+            %li.has-dropdown
+              = link_to "ATHLETICS", root_path
+              %ul.dropdown
+                - if @athletics.any?
+                  - @athletics.each do |event|
+                    %li= link_to event.name.upcase, "data-no-turbolink" => true, athletic_path(event)
+            %li.active= link_to "REGISTER", "data-no-turbolink" => true, new_registration_path
+            %li= link_to "CONTACT US", "data-no-turbolink" => true, home_contact_path
+    
     = yield
     .footer
       .medium-12.columns
