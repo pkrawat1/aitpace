@@ -1,6 +1,7 @@
 Aitpace::Application.routes.draw do
   resources :registrations
   resources :event
+  resources :updates
   resources :athletics
   resources :secretories
   get "event/index"

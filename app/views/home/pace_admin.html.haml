@@ -1,8 +1,26 @@
 .panel.medium-10.medium-offset-1.large-8.large-offset-2.columns{style: "margin-top:3%"}
   
-  %h3 
-    Details for Event pages
+  %h3
+    Details of Updates
     = link_to "Check Registrations", home_registrations_path, class: "button"
+  %table.large-12.columns
+    %th Update Title
+    %th Description
+    %th Action
+    - if @updates.any?
+      - @updates.each do |update|
+        %tr
+          %td= update.heading
+          %td= update.description
+          %td
+            = link_to "Edit", edit_update_path(update.id), class: "button tiny"
+            = link_to "Delete", update_path(update.id), method: :delete, data: { confirm: 'Are you sure ?'}, class: "button tiny alert" 
+    %tr
+      %td
+        = link_to "Add Updates", new_update_path, class: "button"
+  
+  %h3 
+    Details for Event pages  
   %table.large-12.columns
     %th Event Name
     %th Event Head
@@ -14,6 +32,7 @@
           %td= event.event_head_name
           %td
             = link_to "Edit", edit_event_path(event.id), class: "button tiny"
+  
   %h3 
     Details for Athletics pages
   %table.large-12.columns

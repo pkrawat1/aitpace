@@ -4,7 +4,7 @@
     %h1 Welcome to  PACE 2014
     %p
       An annual intercollegiate sports fest organized by 
-      %a.label.success{href: "http://www.aitpune.com", style: "margin: auto"}Army institute of technology.
+      %a.label{href: "http://www.aitpune.com", style: "margin: auto"}Army institute of technology.
       An excellent opportunity for students of various colleges in pune to
       get acquainted with each other, exhibit their competitive spirits and in the true spirit
       of sportsmanship take victory and defeat in their stride.
@@ -12,8 +12,15 @@
       Refuse To Lose !!!
 
   .glide_right.medium-3.medium-offset-1.large-3.large-offset-1.columns
-    %br
-    %h1 Updates
+    %h1{align: "center"} Updates
     %hr
-    %p Starting 11th Feb
-    %p Registrations are open
+    %ul.my-orbit{"data-orbit" => "", "data-options" => "timer_speed: 2000; navigation_arrows: false;"}
+      - if @updates.any?
+        - i = 1
+        - @updates.each do |update|
+          %li{"data-orbit-slide" => "#{i}-slide"}
+            %div.medium-12
+              %h1{style: "font-size: 25px"}= update.heading
+              %p.label
+                = update.description
+          - i = i + 1
