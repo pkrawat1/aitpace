@@ -12,7 +12,7 @@ $green: rgb(0,140,180)
   100% 
     opacity: 1
 
-@mixin header($color,$fsize)
+@mixin custom_font($color,$fsize)
   text-shadow: 5px 0px 10px black
   color: $color
   font-size: $fsize
@@ -25,7 +25,7 @@ $green: rgb(0,140,180)
 .name
   left: 140px
   h2
-    @include header(white,40px)
+    @include custom_font(white,40px)
     text-shadow: 5px 0px 10px black
     font-weight: 500
     height: 100px
@@ -37,24 +37,24 @@ $green: rgb(0,140,180)
   margin-bottom: 10%
   background: url('flag.png') no-repeat center rgba($green, 0.3)
   h1,h2,h3,h4
-    @include header(white,40px)
+    @include custom_font(white,40px)
   p,a
     text-align: justify
-    @include header(white,20px)    
+    @include custom_font(white,20px)    
 
 .footer
   text-align: center
-  @include header(white, 10px)
+  @include custom_font(white, 10px)
   h3
-    @include header(white,30px)
+    @include custom_font(black,30px)
   p
-    @include header(white,15px)
+    @include custom_font(white,15px)
   a
-    @include header(white,15px)
+    @include custom_font(white,15px)
   .medium-3 
     padding-bottom: 2%
   .medium-12
-    background: rgba(0,0,0,.5)
+    background: rgba(200,200,200,.3)
     padding-bottom: 2%
 
 .sticky
