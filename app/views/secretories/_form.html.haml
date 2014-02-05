@@ -14,7 +14,7 @@
           .small-9.medium-9.large-9.columns
             = f.text_field :name, required: "required", pattern: "^[a-zA-Z\s]{6,}$", placeholder: "Enter Name"
             %small.error ERROR: must be more than 6 characters
-      
+         
         .row.collapse
           .small-3.medium-3.large-3.columns
             %span.prefix
@@ -38,6 +38,13 @@
           .small-9.medium-9.large-9.columns
             = f.text_field :designation, required: "required", placeholder: "example: Sports Secretary"
             %small.error ERROR: Invalid Entry
+        
+        .row.collapse
+          .small-3.medium-3.large-3.columns
+            %span.prefix
+              = f.label "Rank"
+          .small-9.medium-9.large-9.columns
+            = f.select(:rank,options_for_select(1..10))
       
         .row.collapse
           .small-3.medium-3.large-3.columns
