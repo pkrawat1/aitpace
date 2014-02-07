@@ -12,7 +12,6 @@
     %th email
     %th members
     %th Staff mobile
-    %th Registered On
     - if @teams.any?
       - @teams.each do |team|
         %tr
@@ -23,4 +22,3 @@
           %td= team.email
           %td= team.members
           %td= team.staff_contact
-          %td= team.created_at.to_date
