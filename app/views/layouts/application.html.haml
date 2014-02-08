@@ -136,3 +136,15 @@
             Copyright &copy 2014 AIT pune. All Rights Reserved.
     
     = javascript_include_tag "application"
+    :javascript
+      $(function(){
+        if( !($('html').hasClass('boxsizing')) ){
+          $('.boxSized, .boxSized *').each(function(){
+            var fullW = $(this).outerWidth(),
+            actualW = $(this).width(),
+            wDiff = fullW - actualW,
+            newW = actualW - wDiff;
+            $(this).css('width',newW);
+          });
+        }
+      });
