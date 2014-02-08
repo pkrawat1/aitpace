@@ -4,7 +4,7 @@
     %link{rel: "icon", type: "image/png", href: "/assets/favicon.png"}
     %meta{charset: "utf-8"}
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
-    %meta{name: "aitpace 2014", content: "PACE is an event that provides an excellent opportunity for students of various colleges in Pune to get acquainted with each other, exhibit their competitive spirits and in the true spirit of sportsmanship take victory and defeat in their stride."}
+    %meta{name: "AIT Pace", content: "PACE is an event that provides an excellent opportunity for students of various colleges in Pune to get acquainted with each other, exhibit their competitive spirits and in the true spirit of sportsmanship take victory and defeat in their stride."}
 
     %title= content_for?(:title) ? yield(:title) : "AIT PACE 2014"
     = stylesheet_link_tag    "application"
@@ -73,12 +73,12 @@
             %h1 Powered By
             .small-3.small-offset-1.columns
               %a{href: "http://rahulcomputers.net/"}
-                %img{src: "/assets/rc.png"}
+                %img{src: "/assets/rc.png", alt: "Rahul Computers"}
                 %span.hide-for-small-only 
                   %br
                   Rahul Computers
             .small-3.pull-1.columns
-              %a{href: "http://www.sakaaltimes.com/"}
+              %a{href: "http://www.sakaaltimes.com/", alt: "Sakaal Times"}
                 %img{style: "padding: 13% 0", src: "/assets/st.png"}
                 %span.hide-for-small-only
                   %br
@@ -134,7 +134,7 @@
         %hr
         .row
           .medium-6.medium-centered.columns
-            Copyright &copy 2014 AIT pune. All Rights Reserved.
+            Copyright &copy; 2014 AIT pune. All Rights Reserved.
     
     = javascript_include_tag "application"
     :javascript
