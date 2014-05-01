@@ -1,3 +1,5 @@
+{<img src="https://codeclimate.com/repos/53090d9ae30ba070920022c4/badges/372a946bda462aa9b6ee/gpa.png" />}[https://codeclimate.com/repos/53090d9ae30ba070920022c4/feed]
+
 == README
 
 This README would normally document whatever steps are necessary to get the
