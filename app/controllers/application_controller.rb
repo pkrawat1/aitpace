@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
     @events = Events.all
     @updates = Update.all
     @athletics = Athletics.all
-    @secretories = Secretory.all(:order => "rank ASC")
+    @secretories = Secretory.order(rank: :asc)
   end
 end
